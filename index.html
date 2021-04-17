@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>抓光头</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+
+<header>
+<h1><div class="text" style=" text-align:center;">抓光头 抓几个</div></h1>
+    <p><div class="text" style=" text-align:center;">人一生会跟8263563人相遇，请你注意面前形形色色的人，他们中有几个光头？</div></p>
+<p><div class="text" style=" text-align:center;"> </div></p>
+    <div class="form">
+      <div class="text" style=" text-align:center;">
+      <label for="guessField">请回答：</label><input type="text" id="guessField" class="guessField">
+      <input type="submit" value="我确定" class="guessSubmit">
+      </div>
+    </div>
+
+    <div class="resultParas">
+      <p class="guesses"></p>
+      <p class="lastResult"></p>
+      <p class="lowOrHi"></p>
+    </div>
+
+    <script>
+     //let randomNumber = Math.floor(Math.random() * 100) + 1;
+     const guesses = document.querySelector('.guesses');
+     const lastResult = document.querySelector('.lastResult');
+     const lowOrHi = document.querySelector('.lowOrHi');
+     const guessSubmit = document.querySelector('.guessSubmit');
+     const guessField = document.querySelector('.guessField');
+     let guessCount = 1;
+     let resetButton;
+
+     function checkGuess() {
+       let userGuess = Number(guessField.value);
+       if (guessCount === 1) {
+         guesses.textContent = '上次猜的数：';
+         guesses.style=" text-align:center;"
+       }
+
+       guesses.textContent += userGuess + ' ';
+
+       if (userGuess === 6) {
+         lastResult.textContent = '你眼神儿真好！' ;
+         //lastResult.style.backgroundColor = 'green';
+         lastResult.style=" text-align:center;";
+         lowOrHi.textContent = '';
+         setGameOver();
+       } else if (guessCount === 3) {
+         lastResult.textContent = '!!!眼神不好吧!!!';
+         lastResult.style=" text-align:center;"
+         lowOrHi.textContent = '';
+         setGameOver();
+       } else {
+         lastResult.textContent = '瞪大眼睛再康康！';
+         //lastResult.style.backgroundColor = 'red';
+         lastResult.style=" text-align:center;"
+         if(userGuess < randomNumber) {
+           lowOrHi.textContent = '你刚才猜低了！' ;
+           lastResult.style=" text-align:center;"
+         } else if(userGuess > randomNumber) {
+           lowOrHi.textContent = '你刚才猜高了！';
+           lastResult.style=" text-align:center;"
+         }
+       }
+
+       guessCount++;
+       guessField.value = '';
+       guessField.focus();
+     }
+
+     guessSubmit.addEventListener('click', checkGuess);
+
+     function setGameOver() {
+       guessField.disabled = true;
+       guessSubmit.disabled = true;
+       resetButton = document.createElement('button');
+       resetButton.textContent = '开始新游戏';
+       document.body.appendChild(resetButton);
+       resetButton.addEventListener('click', resetGame);
+     }
+
+     function resetGame() {
+       guessCount = 3;
+       const resetParas = document.querySelectorAll('.resultParas p');
+       for(let i = 0 ; i < resetParas.length ; i++) {
+         resetParas[i].textContent = '';
+       }
+
+       resetButton.parentNode.removeChild(resetButton);
+       guessField.disabled = false;
+       guessSubmit.disabled = false;
+       guessField.value = '';
+       guessField.focus();
+       lastResult.style.backgroundColor = 'white';
+     }
+   </script>
+</header>
+
+<main>
+<canvas id="canvas"></canvas>
+</main>
+
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js'></script><script src="./script.js"></script>
+</body>
+</html>
