@@ -1,111 +1,392 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>抓光头</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>有机蔬果 健康生活</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+        <!-- Place favicon.png in the root directory -->
+
+		<!-- CSS here -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+		<link rel="stylesheet" href="css/meanmenu.css">
+		<link rel="stylesheet" href="css/flaticon.css">
+        <link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/dripicons.css">
+        <link rel="stylesheet" href="css/themify-icons.css">
+        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+    </head>
+    <body>
 
 
-<header>
-<h1><div class="text" style=" text-align:center;">抓光头 抓几个</div></h1>
-    <p><div class="text" style=" text-align:center;">人一生会跟8263563人相遇，请你注意面前形形色色的人，他们中有几个光头？</div></p>
-<p><div class="text" style=" text-align:center;"> </div></p>
-    <div class="form">
-      <div class="text" style=" text-align:center;">
-      <label for="guessField">请回答：</label><input type="text" id="guessField" class="guessField">
-      <input type="submit" value="我确定" class="guessSubmit">
-      </div>
-    </div>
 
-    <div class="resultParas">
-      <p class="guesses"></p>
-      <p class="lastResult"></p>
-      <p class="lowOrHi"></p>
-    </div>
+		<!-- header-start -->
+    <header>
+  			<div class="header-area header-2 d-none d-md-block">
+  				<div class="container">
+  					<div class="row">
+  						<div class="col-xl-7 col-lg-7 col-md-9">
+  							<div class="header-wrapper">
+  								<div class="header-text">
+  									<span> <i class="far fa-map"></i> 504 White St . Dawsonville, GA 30534 , New York</span>
+  									<span> <i class="far fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="413234312e333501262c20282d6f222e2c">[email&#160;protected]</a></span>
+  								</div>
+  							</div>
+  						</div>
+  						<div class="col-xl-5 col-lg-5 col-md-3">
+  							<div class="header-icon text-md-right">
+  								<a href="#"><i class="fab fa-facebook-f"></i></a>
+  								<a href="#"><i class="fab fa-twitter"></i></a>
+  								<a href="#"><i class="fab fa-linkedin"></i></a>
+  								<a href="#"><i class="fab fa-youtube"></i></a>
+  								<a href="#"><i class="fab fa-behance"></i></a>
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+      <div id="sticky-header" class="main-menu-area">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-xl-2 col-lg-2 col-md-4 col-6">
+							<div class="logo">
+								<a href="index.html">
+									<img class="standard-logo" src="img/logo/logo.png" alt="" />
+									<img class="retina-logo" src="img/logo/logo@2x.png" alt="" />
+								</a>
+							</div>
+						</div>
+						<div class="col-xl-10 col-lg-10 col-md-8 col-6">
+							<div class="header-right f-right">
+								<ul>
+									<li class="search-icon"><a href="#" data-toggle="modal" data-target="#search-modal"><i class="dripicons-search"></i></a></li>
+									<li class="unser-icon"><a href="#"><i class="dripicons-user"></i></a></li>
+									<li class="cart-icon"><a href="#"><i class="dripicons-cart"></i></a> <span>2</span></li>
+									<li class="active info-bar"><a href="#"><i class="dripicons-vibrate"></i></a></li>
+								</ul>
+							</div>
+							<div class="main-menu text-right f-right">
+								<nav id="mobile-menu">
+								</nav>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="mobile-menu"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="extra-info">
+				<div class="close-icon">
+					<button>
+						<i class="far fa-window-close"></i>
+					</button>
+				</div>
+				<div class="logo-side mb-30">
+					<a href="index.html">
+						<img src="img/logo/logo-white.png" alt="" />
+					</a>
+				</div>
+			</div>
+		</header>
+		<!-- header-end -->
 
-    <script>
-     //let randomNumber = Math.floor(Math.random() * 100) + 1;
-     const guesses = document.querySelector('.guesses');
-     const lastResult = document.querySelector('.lastResult');
-     const lowOrHi = document.querySelector('.lowOrHi');
-     const guessSubmit = document.querySelector('.guessSubmit');
-     const guessField = document.querySelector('.guessField');
-     let guessCount = 1;
-     let resetButton;
+    <!-- slider-start -->
+    		<div class="slider-area">
+    			<div class="slider-active">
+    				<div class="single-slider slider-height-2  d-flex align-items-center" style="background-image:url(img/slider/slider2.jpg)">
+    				   <div class="container">
+    					   <div class="row ">
+    						   <div class="col-xl-12">
+    								<div class="slider-content">
+    									<h1 data-animation="fadeInUp" data-delay=".6s">有机蔬果 <br> 健康生活</h1>
+    									<p data-animation="fadeInUp" data-delay=".8s">蔬菜是人们日常饮食中必不可少的食物之一。蔬菜可提供人体所必需的多种维生素和矿物质。据国际粮农组织1990年统计，人体必需的维生素C的90％、维生素A的60％来自蔬菜。此外，蔬菜中还有多种多样的植物化学物质，是人们公认的对健康有效的成分.</p>
+    									<div class="slider-button">
+    										<a data-animation="fadeInLeft" data-delay=".8s" class="btn" href="#">Our Services</a>
+    										<a data-animation="fadeInRight" data-delay="1s" class="btn active" href="#">Our Services</a>
+    									</div>
+    								</div>
+    						   </div>
+    					   </div>
+    				   </div>
+    				</div>
+    				<div class="single-slider slider-height-2  d-flex align-items-center" style="background-image:url(img/slider/slider2-2.jpg)">
+    				   <div class="container">
+    					   <div class="row ">
+    						   <div class="col-xl-12">
+    								<div class="slider-content">
+    									<h1 data-animation="fadeInUp" data-delay=".6s">有机蔬果 <br> 健康生活</h1>
+    									<p data-animation="fadeInUp" data-delay=".8s">蔬菜是人们日常饮食中必不可少的食物之一。蔬菜可提供人体所必需的多种维生素和矿物质。据国际粮农组织1990年统计，人体必需的维生素C的90％、维生素A的60％来自蔬菜。此外，蔬菜中还有多种多样的植物化学物质，是人们公认的对健康有效的成分.</p>
+    									<div class="slider-button">
+    										<a data-animation="fadeInLeft" data-delay=".8s" class="btn" href="#">点击购买</a>
+    										<a data-animation="fadeInRight" data-delay="1s" class="btn active" href="#">了解详情</a>
+    									</div>
+    								</div>
+    						   </div>
+    					   </div>
+    				   </div>
+    				</div>
+    			</div>
+    		</div>
+    		<!-- slider-start -->
+		<!-- slider-start -->
 
-     function checkGuess() {
-       let userGuess = Number(guessField.value);
-       if (guessCount === 1) {
-         guesses.textContent = '上次猜的数：';
-         guesses.style=" text-align:center;"
-       }
+		<!-- we-do-start -->
+		<div class="we-do-area pt-110 pb-85">
+			<div class="container">
+				<div class="row">
+                    <div class="col-xl-6 col-lg-6 offset-lg-3 offset-xl-3">
+                        <div class="section-title text-center section-circle mb-70">
+							<div class="section-img">
+								<img src="img/shape/1.png" alt="" />
+							</div>
+							<h1>我们可以为您带来</h1>
+							<p>绿色食物含有儿茶素、异硫氰酸脂等植化素，可促进肺部和肝脏健康；番茄、红椒等红色食物含茄红素和鞣花酸，可促进消化道和泌尿道健康；蓝紫色食物则含有花青素和白藜芦醇等植化素，有助脑部和肾脏健康。橙黄色食物则含有叶黄素和柠檬黄素，白色食物含有大蒜素和檞皮素等。</p>
+                        </div>
+                    </div>
+                </div>
+				<div class="row">
+					<div class="col-xl-4 col-lg-4 col-md-6">
+						<div class="we-do-wrapper text-center mb-30">
+							<div class="we-do-img">
+								<img src="img/icon/icon1.png" alt="" />
+							</div>
+							<div class="we-do-text">
+								<h4><a href="#">Natural Food</a></h4>
+								<p>有机蔬菜被人们称为“纯而又纯”的食品,从基地到生产,从加工到上市,都有非常严格的要求。有机蔬菜从生产到加工的诸多过程绝对禁止使用农药、化肥、激素、转基因等人工合成物质。在生产和加工有机蔬菜时必须建立严格的生产、质量控制和管理体系。与其他蔬菜相比,有机蔬菜在整个生产、加工和消费过程中更强调环境的安全性,突出人类、自然和社会的持续协调发展。</p>
+								<a href="#">了解更多 <i class="dripicons-arrow-thin-right"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-4 col-lg-4 col-md-6">
+						<div class="we-do-wrapper text-center  mb-30">
+							<div class="we-do-img">
+								<img src="img/icon/icon2.png" alt="" />
+							</div>
+							<div class="we-do-text">
+								<h4><a href="#">Biologically Safe</a></h4>
+								<p>有机蔬菜在安全、营养、健康方面给您带来的安全，性价比就远高于一般蔬菜。更为重要的一点是，长时间食用健康绿色食品，能够提高免疫力，体内毒素逐渐成正常现象。另一方面对患病的机率，也会减少医药费用和身体带来的损伤等。</p>
+								<a href="#">了解更多 <i class="dripicons-arrow-thin-right"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-4 col-lg-4 col-md-6">
+						<div class="we-do-wrapper text-center mb-30">
+							<div class="we-do-img">
+								<img src="img/icon/icon3.png" alt="" />
+							</div>
+							<div class="we-do-text">
+								<h4><a href="#">Conserve Biodiversity</a></h4>
+								<p>有机农业生产体系由于严格禁止使用化肥、杀虫剂，能够有效保护生物多样性，维持生态系统的稳定性。</p>
+								<a href="#">了解更多 <i class="dripicons-arrow-thin-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- we-do-end -->
 
-       guesses.textContent += userGuess + ' ';
 
-       if (userGuess === 6) {
-         lastResult.textContent = '你眼神儿真好！' ;
-         //lastResult.style.backgroundColor = 'green';
-         lastResult.style=" text-align:center;";
-         lowOrHi.textContent = '';
-         setGameOver();
-       } else if (guessCount === 3) {
-         lastResult.textContent = '!!!眼神不好吧!!!';
-         lastResult.style=" text-align:center;"
-         lowOrHi.textContent = '';
-         setGameOver();
-       } else {
-         lastResult.textContent = '瞪大眼睛再康康！';
-         //lastResult.style.backgroundColor = 'red';
-         lastResult.style=" text-align:center;"
-         if(userGuess < randomNumber) {
-           lowOrHi.textContent = '你刚才猜低了！' ;
-           lastResult.style=" text-align:center;"
-         } else if(userGuess > randomNumber) {
-           lowOrHi.textContent = '你刚才猜高了！';
-           lastResult.style=" text-align:center;"
-         }
-       }
+		<!-- product-area-start -->
+		<div class="product-area pt-110 pb-85 pos-relative fix">
+			<div class="shape spahe1 bounce-animate"><img src="img/shape/shape1.png" alt=""></div>
+			<div class="shape spahe2 bounce-animate"><img src="img/shape/shape2.png" alt=""></div>
+			<div class="shape spahe3 bounce-animate"><img src="img/shape/shape3.png" alt=""></div>
+			<div class="shape spahe4 bounce-animate"><img src="img/shape/shape4.png" alt=""></div>
+			<div class="container">
+				<div class="row">
+                    <div class="col-xl-6 col-lg-6 offset-lg-3 offset-xl-3">
+                        <div class="section-title text-center section-circle mb-70">
+							<div class="section-img">
+								<img src="img/shape/1.png" alt="" />
+							</div>
+							<h1>我们的产品</h1>
+							<p>我国栽培的蔬菜总共有一百多种，其中主要栽培的就有四五十种。这些种类不同的蔬菜，每天给我们提供各种各样的营养元素，满足我们的饮食需求。</p>
+                        </div>
+                    </div>
+                </div>
 
-       guessCount++;
-       guessField.value = '';
-       guessField.focus();
-     }
+						<div class="tab-content" id="myTabContent">
+							<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+								<div class="row">
+									<div class="col-xl-3 col-lg-3 col-md-6">
+										<div class="product-wrapper text-center mb-30">
+											<div class="product2-img">
+												<a href="#"><img src="img/product/product1.jpg" alt="" /></a>
+												<div class="product-action">
+													<a href="#"><i class="fas fa-shopping-cart"></i></a>
+													<a href="#"><i class="fas fa-heart"></i></a>
+													<a href="#"><i class="fas fa-search"></i></a>
+												</div>
+											</div>
+											<div class="product-text product2-text">
+												<h4><a href="#">亲亲蜜甜橙</a></h4>
+												<div class="pro-rating">
+													<i class="far fa-star"></i>
+													<i class="far fa-star"></i>
+													<i class="far fa-star"></i>
+													<i class="far fa-star"></i>
+													<i class="far fa-star"></i>
+												</div>
+												<div class="pro-price">
+													<span>￥15</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-3 col-lg-3 col-md-6">
+										<div class="product-wrapper text-center mb-30">
+											<div class="product2-img">
+												<a href="#"><img src="img/product/product2.jpg" alt="" /></a>
+												<div class="product-action">
+													<a href="#"><i class="fas fa-shopping-cart"></i></a>
+													<a href="#"><i class="fas fa-heart"></i></a>
+													<a href="#"><i class="fas fa-search"></i></a>
+												</div>
+											</div>
+											<div class="product-text product2-text">
+												<h4><a href="#">新鲜红富士</a></h4>
+												<div class="pro-rating">
+													<i class="far fa-star"></i>
+													<i class="far fa-star"></i>
+													<i class="far fa-star"></i>
+													<i class="far fa-star"></i>
+													<i class="far fa-star"></i>
+												</div>
+												<div class="pro-price">
+													<span>￥9.8</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-3 col-lg-3 col-md-6">
+										<div class="product-wrapper text-center mb-30">
+											<div class="product2-img">
+												<a href="#"><img src="img/product/product3.jpg" alt="" /></a>
+												<div class="product-action">
+													<a href="#"><i class="fas fa-shopping-cart"></i></a>
+													<a href="#"><i class="fas fa-heart"></i></a>
+													<a href="#"><i class="fas fa-search"></i></a>
+												</div>
+											</div>
+											<div class="product-text product2-text">
+												<h4><a href="#">脆脆西蓝花</a></h4>
+												<div class="pro-rating">
+													<i class="far fa-star"></i>
+													<i class="far fa-star"></i>
+													<i class="far fa-star"></i>
+													<i class="far fa-star"></i>
+													<i class="far fa-star"></i>
+												</div>
+												<div class="pro-price">
+													<span>￥12</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-3 col-lg-3 col-md-6">
+										<div class="product-wrapper text-center mb-30">
+											<div class="product2-img">
+												<a href="#"><img src="img/product/product4.jpg" alt="" /></a>
+												<div class="product-action">
+													<a href="#"><i class="fas fa-shopping-cart"></i></a>
+													<a href="#"><i class="fas fa-heart"></i></a>
+													<a href="#"><i class="fas fa-search"></i></a>
+												</div>
+											</div>
+											<div class="product-text product2-text">
+												<h4><a href="#">汁汁圣女果</a></h4>
+												<div class="pro-rating">
+													<i class="far fa-star"></i>
+													<i class="far fa-star"></i>
+													<i class="far fa-star"></i>
+													<i class="far fa-star"></i>
+													<i class="far fa-star"></i>
+												</div>
+												<div class="pro-price">
+													<span>￥3.5</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 
-     guessSubmit.addEventListener('click', checkGuess);
+		<!-- counter-area-start -->
+		<div class="counter-area pt-110 pb-85" style="background-image:url(img/bg/bg9.jpg)">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-12">
+						<div class="counter-title text-center mb-60">
+							<h1>以专业精神精益求精 <br> 以负责品质追求绿色</h1>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+						<div class="counter-wrapper mb-30">
+							<div class="counter-text">
+								<h1><span class="counter">25</span>+</h1>
+								<span>创立时长</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+						<div class="counter-wrapper mb-30">
+							<div class="counter-text">
+								<h1><span class="counter">98</span>+</h1>
+								<span>专家成员</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+						<div class="counter-wrapper mb-30">
+							<div class="counter-text">
+								<h1><span class="counter">49</span>+</h1>
+								<span>获得奖项</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+						<div class="counter-wrapper mb-30">
+							<div class="counter-text">
+								<h1><span class="counter">85</span>+</h1>
+								<span>连锁企业</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- counter-area-end -->
 
-     function setGameOver() {
-       guessField.disabled = true;
-       guessSubmit.disabled = true;
-       resetButton = document.createElement('button');
-       resetButton.textContent = '开始新游戏';
-       document.body.appendChild(resetButton);
-       resetButton.addEventListener('click', resetGame);
-     }
-
-     function resetGame() {
-       guessCount = 3;
-       const resetParas = document.querySelectorAll('.resultParas p');
-       for(let i = 0 ; i < resetParas.length ; i++) {
-         resetParas[i].textContent = '';
-       }
-
-       resetButton.parentNode.removeChild(resetButton);
-       guessField.disabled = false;
-       guessSubmit.disabled = false;
-       guessField.value = '';
-       guessField.focus();
-       lastResult.style.backgroundColor = 'white';
-     }
-   </script>
-</header>
-
-<main>
-<canvas id="canvas"></canvas>
-</main>
-
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js'></script><script src="./script.js"></script>
-</body>
+		<!-- JS-->
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="js/waypoints.min.js"></script>
+        <script src="js/waypoints.min.js"></script>
+        <script src="js/jquery.counterup.min.js"></script>
+        <script src="js/jquery.countdown.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/isotope.pkgd.min.js"></script>
+        <script src="js/jquery.meanmenu.min.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/ajax-form.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/jquery.scrollUp.min.js"></script>
+        <script src="js/imagesloaded.pkgd.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
 </html>
